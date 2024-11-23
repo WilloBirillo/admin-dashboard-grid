@@ -3,7 +3,7 @@
 :root {
   --system-ui: Roboto, "Segoe UI", Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --sidebarColor: #0d9488;
+  --sidebarColor: #0f766e;
   --headerColor: white;
   --mainColor: #e2e8f0;
 }
@@ -27,6 +27,8 @@ button,
 textarea,
 select {
   font: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 [src$=".svg"] {
@@ -35,9 +37,10 @@ select {
 
 .sidebar [src$=".svg"] {
   filter: brightness(0) invert(1); /* to change the svg color to white */
+  width: 25px;
 }
 
-.sidebar [src$=".svg"]:nth-child(1) {
+.dashboard [src$=".svg"] {
   width: 50px;
 }
 
@@ -52,9 +55,9 @@ select {
 .sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  border: solid 1px black;
   background-color: var(--sidebarColor);
   display: grid;
+  grid-template-rows: 0.25fr 1fr 1.5fr;
   padding-left: 1em;
 }
 
@@ -99,12 +102,38 @@ select {
   background-color: var(--headerColor);
 }
 
-.sidebar .dashboard {
+.sidebar .dashboard,
+.main-nav li,
+.secondary-nav li {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
+  gap: 20px;
 }
 
 .dashboard h2 {
-  margin-top: 0.4em;
-  margin-left: 0.4em;
+  margin-top: 0.6rem;
+  color: var(--mainColor);
+}
+
+.main-nav li,
+.secondary-nav li {
+  margin-left: 0.95rem;
+}
+
+.sidebar .dashboard {
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.main-nav a,
+.secondary-nav a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--mainColor);
+  margin-top: 1.5rem;
+}
+
+a {
+  text-decoration: none;
 }
