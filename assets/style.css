@@ -64,14 +64,7 @@ img[class="user-logo-big"] {
   grid-template-rows: 0.5fr 2.5fr;
 }
 
-.sidebar {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  background-color: var(--sidebarColor);
-  display: grid;
-  grid-template-rows: 0.25fr 1fr 1.5fr; /* add shadow to various containers */
-  padding-left: 1em;
-}
+/* Header */
 
 .header {
   grid-column: 2 / 3;
@@ -81,72 +74,6 @@ img[class="user-logo-big"] {
   padding-left: 2em;
   padding-right: 2em;
   padding-top: 1em;
-}
-
-.main {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  border: solid 1px black;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  background-color: var(--mainColor);
-}
-
-.projects-container {
-  grid-area: 1 / 1 / 3 / 2;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 8px;
-}
-
-.announcements {
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
-}
-
-.trending {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
-}
-
-.card {
-  height: 200px;
-  border: 1px solid black;
-  background-color: var(--headerColor);
-}
-
-.sidebar .dashboard,
-.main-nav li,
-.secondary-nav li {
-  display: flex;
-  align-items: flex-end;
-  gap: 20px;
-}
-
-.dashboard h2 {
-  margin-top: 0.6rem;
-  color: var(--mainColor);
-}
-
-.main-nav li,
-.secondary-nav li {
-  margin-left: 0.95rem;
-}
-
-.sidebar .dashboard {
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-.main-nav a,
-.secondary-nav a {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-top: 1.5rem;
 }
 
 a {
@@ -220,4 +147,83 @@ button {
   border: none;
   padding: 0.5em 2em;
   border-radius: 20px;
+}
+
+/* sidebar */
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-color: var(--sidebarColor);
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 1.5fr; /* add shadow to various containers */
+  padding-left: 1em;
+}
+
+.sidebar .dashboard,
+.main-nav li,
+.secondary-nav li {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.dashboard h2 {
+  margin-top: 0.6rem;
+  color: var(--mainColor);
+}
+
+.main-nav li,
+.secondary-nav li {
+  margin-left: 0.95rem;
+}
+
+.sidebar .dashboard {
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.main-nav a,
+.secondary-nav a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+/* main */
+
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border: solid 1px black;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: var(--mainColor);
+}
+
+.projects-container {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
+}
+
+.announcements {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.trending {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.card {
+  height: 200px;
+  border: 1px solid black;
+  background-color: var(--headerColor);
 }
