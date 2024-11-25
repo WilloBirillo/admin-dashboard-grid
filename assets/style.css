@@ -207,7 +207,7 @@ button {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: 2fr 500px;
+  grid-template-columns: 2fr 45ch;
   background-color: var(--mainColor);
   gap: 20px;
   padding: 1.5em;
@@ -267,7 +267,6 @@ h4 {
 
 .t-container,
 .a-container {
-  max-width: 45ch;
 }
 
 .t-card {
