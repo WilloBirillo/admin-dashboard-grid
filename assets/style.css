@@ -81,9 +81,7 @@ img[class="user-logo-big"] {
   background-color: var(--headerColor);
   display: grid;
   grid-template-rows: 0.5fr 1fr;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 1em;
+  padding: 1.5em;
 }
 
 a {
